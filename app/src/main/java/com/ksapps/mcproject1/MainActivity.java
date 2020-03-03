@@ -24,26 +24,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
 import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
@@ -63,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int progress_bar_type = 0;
     private String[] arr;
     private int praticeNum = 1;
-    private RequestQueue queue;
     private String selectedPath;
     private File folder;
     
@@ -128,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (file.isFile()) {
-            Toast.makeText(this, "Downloaded", Toast.LENGTH_SHORT).show();
         }else{
             new DownloadFileFromURL().execute(arr);
         }
@@ -178,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("Kshitij",praticeNum+"");
                 Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
                 takeVideoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 5);
+                takeVideoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
                 takeVideoIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(folder));
 
                 StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -193,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                button.setText("Capture");
+                button2.setVisibility(View.INVISIBLE);
                 button3.setVisibility(View.INVISIBLE);
                 if(parent.getSelectedItem().toString().equals("Select an Option")){
                     myVideoView.setVisibility(View.INVISIBLE);

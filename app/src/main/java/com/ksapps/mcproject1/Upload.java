@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class Upload {
 
-    public static final String UPLOAD_URL= "http://18.222.151.64:80/upload.php";
+    public static final String UPLOAD_URL= "http://18.217.240.188:80/upload.php";
 
     private int serverResponseCode;
 
