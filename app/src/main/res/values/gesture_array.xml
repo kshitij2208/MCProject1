@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="gesture">
-        <item>Select an Option</item>
+        <item>Select an Gesture Option</item>
         <item>buy</item>
         <item>house</item>
         <item>fun</item>

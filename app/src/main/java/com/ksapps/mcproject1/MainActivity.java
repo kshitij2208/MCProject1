@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 textView.setText("");
                 button3.setVisibility(View.INVISIBLE);
-                button.setText("Capture");
+                button.setText("Capture Video");
                 button2.setVisibility(View.INVISIBLE);
 
                 try {
@@ -179,10 +179,10 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                button.setText("Capture");
+                button.setText("Capture Video");
                 button2.setVisibility(View.INVISIBLE);
                 button3.setVisibility(View.INVISIBLE);
-                if(parent.getSelectedItem().toString().equals("Select an Option")){
+                if(parent.getSelectedItem().toString().equals("Select an Gesture Option")){
                     myVideoView.setVisibility(View.INVISIBLE);
                     button.setVisibility(View.INVISIBLE);
                 }else{
