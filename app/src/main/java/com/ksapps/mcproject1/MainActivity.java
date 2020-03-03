@@ -160,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 folder = new File(Environment.getExternalStorageDirectory() + "/MCProject1/PracticeVideos/"+spinner.getSelectedItem().toString().toUpperCase()+"_PRATICE_"+(praticeNum)+"_SUTAR.mp4");
 
-                Log.v("Kshitij",praticeNum+"");
                 Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
                 takeVideoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 5);
                 takeVideoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
@@ -199,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
                         myVideoView.requestFocus();
 
                     } catch (Exception e) {
-                        Log.e("Error", e.getMessage());
                         e.printStackTrace();
                     }
                 }
@@ -232,7 +230,6 @@ public class MainActivity extends AppCompatActivity {
             button.setText("Record Again");
 
             selectedPath= videoUri.getPath();
-            Log.v("Kshitij",selectedPath);
         }
     }
 
@@ -293,7 +290,6 @@ public class MainActivity extends AppCompatActivity {
                     input.close();
                 }
             } catch (Exception e) {
-                Log.e("Error: ", e.getMessage());
             }
             return null;
         }
