@@ -1,3 +1,5 @@
+CSE 535 - Mobile Computing - Assignment 1
+
 STEPS TO RUN THE APP:
 
 1. The app has been created using Android Studio, so the project can be directly imported into Android Studio.
