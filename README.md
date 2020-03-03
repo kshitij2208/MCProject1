@@ -6,6 +6,7 @@ STEPS TO RUN THE APP:
 2. Once imported, click on RUN -> Run 'app'. The app would start on emulator or an USB Device if connected.(Recommend using emulator for proper functioning of camera such as 5 second timeout)
 3. Once the app is installed wait for few seconds for downloading video and allow requested permissions.
 4. The app can also be installed using APK in /apk directory. 
+5. The videos used to learn any gesture are stored in phone locally in /MCProject1 directory.
 
 UPLOAD FUNCTIONALITY:
 
