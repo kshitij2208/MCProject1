@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    class DownloadFileFromURL extends AsyncTask<String, String, String> {
+    class DownloadFileFromURL extends AsyncTask<String, String, String> implements com.ksapps.mcproject1.DownloadFileFromURL {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -293,8 +293,8 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         }
-
-        protected void onProgressUpdate(Integer... progress) {
+        @Override
+        public void onProgressUpdate(Integer... progress) {
             pDialog.setProgress(progress[0]);
         }
 
