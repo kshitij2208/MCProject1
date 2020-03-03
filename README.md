@@ -3,7 +3,7 @@ CSE 535 - Mobile Computing - Assignment 1
 STEPS TO RUN THE APP:
 
 1. The app has been created using Android Studio, so the project can be directly imported into Android Studio.
-2. Once imported, click on RUN -> Run 'app'. The app would start on emulator or an USB Device if connected.(Recommend using emulator for proper functioning)
+2. Once imported, click on RUN -> Run 'app'. The app would start on emulator or an USB Device if connected.(Recommend using emulator for proper functioning of camera such as 5 second timeout)
 3. Once the app is installed wait for few seconds for downloading video and allow requested permissions.
 4. The app can also be installed using APK in /apk directory. 
 
